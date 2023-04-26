@@ -1,46 +1,40 @@
 class ProductManager{
-    constructor(title, description, price, thumbnail,code,stock){
-        this.title=title;
-        this.description=description;
-        this.price=price;
-        this.thumbnail=thumbnail;
-        this.code=code;
-        this.stock=stock;
+    constructor(){
+        this.products=[];
+        
+        // this.title=title;
+        // this.description=description;
+        // this.price=price;
+        // this.thumbnail=thumbnail;
+        // this.code=code;
+        // this.stock=stock;
+    }    
+    getProducts=()=>{
+        return this.products;
     }
 
-    addProduct(){
-        try{
-            const productos = this.getAll();
-            if(productos.length>0){
-            const lastId = productos[productos.length-1].id+1;
-            product.id= lastId;
-            productos.push(product);                   
-        } else{ product.id=1;                   
-            } 
-         
-        }catch(error){
-            return "El producto no pudo ser guardado";
-        }        
+    addProduct(title,description,price,thumbnail,code,stock){
+        const product={
+            title,
+            description,
+            price,
+            thumbnail,
+            code,
+            stock,
+        } 
 
-    }
-
-    getProduct(){
-        try{
-            const contenido = this.fileName
-            if(contenido.length>0){
-                const productos = JSON.parse(contenido);
-                return productos;
-            } else {
-                return [];
-            }        
-        } catch(error) {
-            return "No hay productos";
+        if (this.product.length ===0){
+            product.id = 1;
+        }
+        else{
+            product.id = this.products [this.products.length-1].id+1
         }
 
     }
-    getProductById(code){
+
+    getProductById(){
         try {
-            const producto = productos.find(elemento=>elemento.id === id);
+            const producto = products.find(elemento=>elemento.id === id);
             return producto;
         } catch (error) {
             return "Not found";
