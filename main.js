@@ -33,5 +33,7 @@ class ProductManager{
 
 const productosStock = new ProductManager();
 productosStock.addProduct("Remera","Lisa",8500,"",5)
+productosStock.addProduct("Pantalon","negro",15500,"",4)
 
 console.log(productosStock.getProducts());
+console.log(productosStock.getProductById(3));
