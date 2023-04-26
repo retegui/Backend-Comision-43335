@@ -5,25 +5,25 @@ class ProductManager{
     getProducts=()=>{
         return this.products;
     }
-    addProduct(title,description,price,thumbnail,code,stock){
-        const product={
+    addProduct = (title,description,price,thumbnail,stock) => {
+        const product ={
             title,
             description,
             price,
             thumbnail,
             stock,
-            code,
         } 
         if (this.products.length ===0){
-            product.code = 1;
+            product.id = 1;
         }
         else{
-            product.code = this.products [this.products.length-1].id+1
+            product.id = this.products [this.products.length-1].id+1
         }
+        this.products.push(product);
     }
     getProductById(){
         try {
-            const producto = products.find(elemento=>elemento.code === id);
+            const producto = products.find(elemento=>elemento.id === id);
             return producto;
         } catch (error) {
             return "Not found";
@@ -32,6 +32,6 @@ class ProductManager{
 };
 
 const productosStock = new ProductManager();
-productosStock.addProduct("Remera", "Lisa", 8500,)
+productosStock.addProduct("Remera","Lisa",8500,"",5)
 
 console.log(productosStock.getProducts());
