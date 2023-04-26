@@ -5,12 +5,13 @@ class ProductManager{
     getProducts=()=>{
         return this.products;
     }
-    addProduct = (title,description,price,thumbnail,stock) => {
+    addProduct = (title,description,price,thumbnail,code,stock) => {
         const product ={
             title,
             description,
             price,
             thumbnail,
+            code,
             stock,
         } 
         if (this.products.length ===0){
@@ -32,8 +33,8 @@ class ProductManager{
 };
 
 const productosStock = new ProductManager();
-productosStock.addProduct("Remera","Lisa",8500,"",5)
-productosStock.addProduct("Pantalon","negro",15500,"",4)
+productosStock.addProduct("Remera","Lisa",8500,"",175395839,5)
+productosStock.addProduct("Pantalon","negro",15500,"",852837495,4)
 
 console.log(productosStock.getProducts());
 console.log(productosStock.getProductById(3));
