@@ -1,10 +1,28 @@
-[{
-    "title": "Pepe",
-    "description": "pepe",
-    "price":"pepe",
-    "thumbnail":"pepe",
-    "code":"pepe",
-    "stock":"Pepe"
-}
-
+[
+	{
+		"title": "Pepe",
+		"description": "pepe",
+		"price": "pepe",
+		"thumbnail": "pepe",
+		"code": "pepe",
+		"stock": "Pepe"
+	},
+	{
+		"title": "pepe",
+		"description": "pepe",
+		"price": "pepe",
+		"thumbnail": "pepe",
+		"code": "pepe",
+		"stock": "pepe",
+		"id": null
+	},
+	{
+		"title": "pepe",
+		"description": "pepe",
+		"price": "pepe",
+		"thumbnail": "pepe",
+		"code": "pepe",
+		"stock": "pepe",
+		"id": 1
+	}
 ]

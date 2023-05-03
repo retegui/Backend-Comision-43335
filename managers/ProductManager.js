@@ -4,21 +4,25 @@ const path = './files/products.json';
 
 export default class ProductManager{
  
-    addProduct = async (productos) => {
-        const producto = await this.mostarproductos ();
+    addProduct = async (producto) => {
+        const productos = await this.getProducts ();
         
-        if (producto.length ===0){
-            productos.id = 1;
+        if (productos.length ===0){
+            producto.id = 1;
         }
         else{
-            productos.id = producto [producto.length-1].id+1
+            producto.id = productos [productos.length-1].id+1
         }
        productos.push(producto);
-       await fs.promises.writeFile(path, JSON.stringify(producto, null, '\t'))
+       await fs.promises.writeFile(path, JSON.stringify(productos, null, '\t'))
      }
     getProducts = async ()=>{
 
         if(fs.existsSync(path)){
+
+            const data = await fs.promises.readFile(path,'utf-8');
+            const productos = JSON.parse(data);
+            return productos;
 
         }else{
         return [];
@@ -41,10 +45,3 @@ export default class ProductManager{
 //     }
 }        
 
-// const productosStock = new ProductManager();
-// productosStock.addProduct("Remera","Lisa",8500,"",175395839,5)
-// productosStock.addProduct("Pantalon","negro",15500,"",852837495,4)
-
-// console.log(productosStock.getProducts());
-// console.log(productosStock.getProductById(3));
-// console.log(deleteById)
