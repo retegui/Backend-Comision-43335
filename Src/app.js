@@ -6,8 +6,8 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 
 //PRODUCTOS//
-const Contenedor = require("./managers/contenedorProductos");
-const productsService = new Contenedor("./files/productos.txt");
+const Contenedor = require("./ProductManager");
+const productsService = new Contenedor("./products.json");
 
 //SERVIDOR EXPRESS//
 const server = app.listen(PORT, ()=>console.log(`Servidor escuchando el puerto ${PORT}`));
