@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ROUTER Y MULTER</h1>
+    <form action="/api/productos" method="post" enctype="multipart/form-data">
+        <label>Title</label>
+        <input type="string" name="title">
+        <label>Description</label>
+        <input type="string" name="description">
+        <label>Code</label>
+        <input type="string" name="code">
+        <label>Price</label>
+        <input type="number" name="price" >
+        <label>Status</label>
+        <input type="boolean" name="status" value="true">
+        <label>Stock</label>
+        <input type="number" name="stock">
+        <label>Category</label>
+        <input type="string" name="stock">
+		<label>Thumbnail</label>
+		<input type="file" name="thumbnail">
+
+        <input type="submit">
+    </form>
+</body>
+</html>

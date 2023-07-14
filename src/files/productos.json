@@ -1,0 +1,148 @@
+[
+  {
+    "title": "Dragon Quest 8",
+    "description": "Best RPG ever",
+    "price": 15000,
+    "thumbnail": "",
+    "code": "15698463",
+    "stock": 5,
+    "id": 1
+  },
+  {
+    "title": "Dragon Quest 8",
+    "description": "Best RPG ever",
+    "price": 15000,
+    "thumbnail": "",
+    "code": "15698463",
+    "stock": 5,
+    "id": 2
+  },
+  {
+    "title": "Dragon Quest 8",
+    "description": "Best RPG ever",
+    "price": 15000,
+    "thumbnail": "",
+    "code": "15698463",
+    "stock": 5,
+    "id": 3
+  },
+  {
+    "title": "Dragon Quest 8",
+    "description": "Best RPG ever",
+    "price": 15000,
+    "thumbnail": "",
+    "code": "15698463",
+    "stock": 5,
+    "id": 4
+  },
+  {
+    "title": "Dragon Quest 8",
+    "description": "Best RPG ever",
+    "price": 15000,
+    "thumbnail": "",
+    "code": "15698463",
+    "stock": 5,
+    "id": 5
+  },
+  {
+    "title": "Dragon Quest 8",
+    "description": "Best RPG ever",
+    "price": 15000,
+    "thumbnail": "",
+    "code": "15698463",
+    "stock": 5,
+    "id": 6
+  },
+  {
+    "title": "Dragon Quest 8",
+    "description": "Best RPG ever",
+    "price": 15000,
+    "thumbnail": "",
+    "code": "15698463",
+    "stock": 5,
+    "id": 7
+  },
+  {
+    "title": "Dragon Quest 8",
+    "description": "Best RPG ever",
+    "price": 15000,
+    "thumbnail": "",
+    "code": "15698463",
+    "stock": 5,
+    "id": 8
+  },
+  {
+    "title": "Dragon Quest 8",
+    "description": "Best RPG ever",
+    "price": 15000,
+    "thumbnail": "",
+    "code": "15698463",
+    "stock": 5,
+    "id": 9
+  },
+  {
+    "title": "Dragon Quest 8",
+    "description": "Best RPG ever",
+    "price": 15000,
+    "thumbnail": "",
+    "code": "15698463",
+    "stock": 5,
+    "id": 10
+  },
+  {
+    "title": "Dragon Quest 8",
+    "description": "Best RPG ever",
+    "price": 15000,
+    "thumbnail": "",
+    "code": "15698463",
+    "stock": 5,
+    "id": 11
+  },
+  {
+    "title": "Dragon Quest 8",
+    "description": "Best RPG ever",
+    "price": 15000,
+    "thumbnail": "",
+    "code": "15698463",
+    "stock": 5,
+    "id": 12
+  },
+  {
+    "title": "Dragon Quest 8",
+    "description": "Best RPG ever",
+    "price": 15000,
+    "thumbnail": "",
+    "code": "15698463",
+    "stock": 5,
+    "id": 13
+  },
+  {
+    "title": "Chrono Trigger",
+    "description": "Buen RPG",
+    "price": "30000",
+    "humbnail": "",
+    "code": "1545678798",
+    "stock": "2",
+    "id": 14
+  },
+  {
+    "title": "Chrono Trigger",
+    "description": "Buen RPG",
+    "price": "30000",
+    "humbnail": "",
+    "code": "1545678798",
+    "stock": "2",
+    "id": 15
+  },
+  {
+    "title": "Pepe",
+    "description": "Pepe",
+    "price": "1",
+    "code": "1",
+    "stock": "1",
+    "id": 16
+  },
+  {
+    "id": 17
+  }
+]
