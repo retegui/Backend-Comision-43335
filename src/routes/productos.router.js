@@ -7,7 +7,8 @@ const router = Router();
 
 const productManager = new ProductManager('../files/productos.json');
 
-// PRODUCTOS//
+//LISTA DE PRODUCTOS//
+
 router.get('/', async(req,res)=>{
     const {limit} = req.query;
     const products = await productManager.getProducts();
@@ -17,6 +18,7 @@ router.get('/', async(req,res)=>{
     });
 
 //PRODUCTO POR ID//
+
 router.get("/:id", async(req,res)=>{
     const {id} = req.params;
     const products = await productManager.getProducts();
@@ -26,6 +28,7 @@ router.get("/:id", async(req,res)=>{
     });
 
 // AGREGAR PRODUCTO//
+
 router.post("/",uploader.single("thumbnail"), async (req,res)=>{
 
     const newProduct = req.body;
@@ -35,17 +38,28 @@ router.post("/",uploader.single("thumbnail"), async (req,res)=>{
     res.send({status:"success",message:"Producto cargado correctamente"})
 })
 
-// //ACTUALIZACION DATOS//
-// router.put("/",async(req,res)=>{
+ //ACTUALIZACION DATOS//
 
-//     const newProduct = req.body;
+router.put("/productos/:id",async(req,res)=>{
+    const {id} = req.params;
+    const {title, description, price, thumbnail, code, stock} = req.body;
+    const products = await productManager.getProducts();
+    const producto = products.find((producto)=> producto.id == id); 
+       if (producto){
+        producto.title = title;
+        producto.description = description;
+        producto.price = price;
+        producto.thumbnail = thumbnail;
+        producto.code = code;
+        producto.stock = stock;
+        return res.json(producto);
+       }
+       res.status(404).json({error:"Producto no encontrado"});
 
-//     await productManager.push(newProduct);
-
-//     res.send({status:"succes",message:"Producto cargado correctamente"})
-// })
+});
 
 //BORRAR PRODUCTOS//
+
 router.delete("/:id",async(req,res)=>{
     const {id} = req.params;
     const products = await productManager.getProducts();

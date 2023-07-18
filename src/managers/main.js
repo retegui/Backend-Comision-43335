@@ -46,17 +46,15 @@ export default class ProductManager{
     //     }catch{}
     // }
 
-//     deleteById = async()=>{
-//         if(fs.existsSync(path)){
-//             const productos = await this.getProducts();
-//             const productoEliminado = productos.filter(productos=>productos.id)
-//             const newProducts=productos.filter(productoEliminado);
-//             await fs.promises.writeFile(path,JSON.stringify(newProducts,null,2));
-//             return `El producto con el id ${id} fue eliminado`;
-//         } else{
-//             return "El elemento no puede ser eliminado"
-//         }
-//     }
+    deleteById = async(id)=>{
+        try {
+            const productos = await this.getProducts();
+            const newProducts = productos.filter(elemento=>elemento.id !== id);
+            await fs.promises.writeFile(path,JSON.stringify(newProducts,null,2));
+            return `El producto con el id ${id} fue eliminado`;
+        } catch {
+            return "El elemento no puede ser eliminado"
+        }
+    }
 }
-
 
