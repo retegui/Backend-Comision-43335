@@ -40,7 +40,7 @@ router.post("/",uploader.single("thumbnail"), async (req,res)=>{
 
  //ACTUALIZACION DATOS//
 
-router.put("/productos/:id", async(req,res) => {
+router.put("/:id", async(req,res) => {
     const {id} = req.params;
     const {title, description, price, thumbnail, code, stock} = req.body;
     const products = await productManager.getProducts();
@@ -62,10 +62,8 @@ router.put("/productos/:id", async(req,res) => {
 
 router.delete("/:id",async(req,res)=>{
     const {id} = req.params;
-    const products = await productManager.getProducts();
-    const productoEliminado = products.find((productos)=> productos.id == id);
-    await productManager.deleteById(productoEliminado);
-    console.log(productoEliminado)
+    await productManager.deleteById(id);
+    res.status(200).json({error:`El producto con el id ${id} fue eliminado` })
 });
 
 

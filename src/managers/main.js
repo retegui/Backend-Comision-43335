@@ -48,8 +48,9 @@ export default class ProductManager{
 
     deleteById = async(id)=>{
         try {
-            const productos = await this.getProducts();
-            const newProducts = productos.filter(elemento=>elemento.id !== id);
+            console.log(id);
+            const productos = await fs.promises.readFile(path,'utf-8');
+            const newProducts = productos.filter(elemento=>elemento.id !== Number(id));
             await fs.promises.writeFile(path,JSON.stringify(newProducts,null,2));
             return `El producto con el id ${id} fue eliminado`;
         } catch {
